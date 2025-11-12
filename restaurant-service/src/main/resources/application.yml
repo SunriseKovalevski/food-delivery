@@ -1,0 +1,22 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: restaurant-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/microservices_db
+    username: app_user
+    password: app_password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+logging:
+  level:
+    com.example.restaurantservice: DEBUG
